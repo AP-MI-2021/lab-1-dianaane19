@@ -41,7 +41,11 @@ Returneaza CMMDC a doua numere x si y folosind al doilea algoritm.
 '''
 def get_cmmdc_v2(x, y):
   # codul vostru aici
-  pass
+  while y!=0:
+    z=x%b
+    x=y
+    y=z
+  return x
   
   
 def main():
@@ -67,11 +71,17 @@ def main():
     # print(list)
     # print(len(list)) #lungimea
     print(get_product(list))
-  if (a == 3):
+  if (a==3):
     # is cmmdc 1
-    x = int(input("Int x="))
-    y = int(input("Int y="))
+    x=int(input("Int x="))
+    y=int(input("Int y="))
     print(get_cmmdc_vl(x, y))
+  if (a==4):
+    # is cmmdc 2
+    x=int(input("Int x="))
+    y=int(input("Int y="))
+    print(get_cmmdc_v2(x, y))
+    
 
 if __name__ == '__main__':
   main()
